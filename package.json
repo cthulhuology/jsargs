@@ -1,0 +1,35 @@
+{
+  "author": {
+    "name": "David Goehrig"
+  },
+  "name": "jsargs",
+  "license": "MIT",
+  "description": "An xargs for json",
+  "version": "0.0.1",
+  "repository": {
+    "url": "http://github.com/cthulhuology/jsargs"
+  },
+  "main": "./lib/jsargs.js",
+  "bin": {
+    "jsargs": "./bin/jsargs"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": ">=0.10"
+  },
+  "readme": "cfcp\n=========\n\nCloudFiles Copy\n\nGetting Started\n---------------\n\n\tcfcp ./test.txt cf://container/test.txt\n\tcfcp cf://container/test.txt /tmp/test.txt\n\nCopy files to and from Rackspace CloudFiles using the above URLs.\n\nTo configure you can create a ~/.cfcprc config javascript:\n\n\tmodule.exports = {\n\t\tcf: {\n\t\t\tprovider: 'rackspace',\n\t\t\tusername: 'UUUUUUUUU',\n\t\t\tapiKey: 'XXXXXXXXXXXXXXXXXXXX',\n\t\t\tregion: 'ORD'\n\t\t}\n\t}\n\nWith your credentials.  You can support multiple providers and configs\nfor example you could setup two separate data centers with two different\nuser and api keys:\n\n\tmodule.exports = {\n\t\tord: {\n\t\t\tprovider: 'rackspace',\n\t\t\tusername: 'UUUUUUUUU',\n\t\t\tapiKey: 'XXXXXXXXXXXXXXXXXXXX',\n\t\t\tregion: 'ORD'\n\t\t}\n\t\tdfw: {\n\t\t\tprovider: 'rackspace',\n\t\t\tusername: 'VVVVVVVVVV',\n\t\t\tapiKey: 'YYYYYYYYYYYYYYYYYYYY',\n\t\t\tregion: 'DFW'\n\t\t}\n\t}\n\nAnd you can then copy files based on the appropriate alias:\n\n\tcfcp ord://test/text.txt - | gzip -c - > text.txt.gz\n\tcfcp test.txt.gz dfw://zipped/test.txt.gz\n\nThis would download the /test/text.txt using the ord credentials and\npipe through gzip and then upload to another account in a different\ndatacenter.\n\nBTW this should just work with other OpenStack providers \nand other clouds like Amazon and Azure, but I don't have \nan S3 or Azure account to test\n\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/cthulhuology/cfcp/issues"
+  },
+  "homepage": "https://github.com/cthulhuology/cfcp",
+  "_id": "cfcp@0.0.5",
+  "dist": {
+    "shasum": "10eb7e47b209583fe1f1a8d60e17a9074e1056f5"
+  },
+  "_from": "cfcp@",
+  "_resolved": "https://registry.npmjs.org/cfcp/-/cfcp-0.0.5.tgz"
+}
