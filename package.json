@@ -5,7 +5,7 @@
   "name": "jsargs",
   "license": "MIT",
   "description": "An xargs for json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "url": "http://github.com/cthulhuology/jsargs"
   },
